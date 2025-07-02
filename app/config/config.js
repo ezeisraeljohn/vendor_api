@@ -43,6 +43,8 @@ module.exports = {
       ssl: {
         require: true,
         rejectUnauthorized: false,
+        ca: process.env.DB_CA_CERT.replace(/\\n/g, "\n")
+
       },
     },
     seederStorage: "json",
